@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: churn-inference-deployment
+  namespace: churn-ml
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: churn-inference
+  template:
+    metadata:
+      labels:
+        app: churn-inference
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: churn-container
+          image: placework459/churn_image_v1:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: MLFLOW_TRACKING_URI
+              value: http://mlflow-service:5000
+            - name: MODEL_NAME
+              value: churn-model
+            - name: MLFLOW_TRACKING_TOKEN
+              value: dummy_token_here
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"

@@ -6,7 +6,7 @@ import mlflow
 import mlflow.pyfunc
 
 # === MLflow Configuration ===
-mlflow.set_tracking_uri("http://localhost:5000")  # Local or remote MLflow server
+mlflow.set_tracking_uri("http://mlflow-service:5000")  # Kubernetes MLflow service URL
 
 # === Load Registered Model by Version ===
 MODEL_URI = "models:/Churn_Model/2"
@@ -49,3 +49,8 @@ def predict(request: InferenceRequest):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
+
+# === Uvicorn App Runner ===
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
