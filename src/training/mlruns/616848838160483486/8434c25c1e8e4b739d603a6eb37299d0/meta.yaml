@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/616848838160483486/8434c25c1e8e4b739d603a6eb37299d0/artifacts
+end_time: 1752054876462
+entry_point_name: ''
+experiment_id: '616848838160483486'
+lifecycle_stage: active
+run_id: 8434c25c1e8e4b739d603a6eb37299d0
+run_name: amazing-cod-156
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752054856411
+status: 3
+tags: []
+user_id: karis

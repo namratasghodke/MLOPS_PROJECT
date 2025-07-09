@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/616848838160483486/b2f093ac166d4473bf7631153217afe1/artifacts
+end_time: 1752051683129
+entry_point_name: ''
+experiment_id: '616848838160483486'
+lifecycle_stage: active
+run_id: b2f093ac166d4473bf7631153217afe1
+run_name: exultant-shad-894
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752051667370
+status: 3
+tags: []
+user_id: karis
