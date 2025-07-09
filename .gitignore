@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+
+# DVC
+*.dvc
+data/
+!data/.gitkeep
+
+# Virtual Envs
+env/
+venv/
+envs/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+envs/*/terraform.tfvars
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Secrets
+.env
+*.pem
+*.key
